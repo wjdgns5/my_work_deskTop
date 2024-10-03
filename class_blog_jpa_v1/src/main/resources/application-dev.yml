@@ -11,10 +11,11 @@ spring:
       expose-session-attributes: true  # Mustache 템플릿에서 세션 속성에 접근할 수 있도록 허용
       expose-request-attributes: true  # Mustache 템플릿에서 요청 속성에 접근할 수 있도록 허용
   datasource:
-    driver-class-name: org.h2.Driver    # 데이터베이스 드라이버로 H2 DB를 사용
-    url: jdbc:h2:mem:test;MODE=MySQL    # H2 인메모리 데이터베이스를 MySQL 호환 모드로 사용 (테스트용)
-    username: sa                        # 데이터베이스 연결 시 기본 사용자 이름
-    password:                           # 데이터베이스 기본 비밀번호 (비어 있음)
+    url: jdbc:mysql://localhost:3306/jpa_demo?useSSL=false&serverTimezone=Asia/Seoul&useLegacyDatetimeCode=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: asd123
+                          # 데이터베이스 기본 비밀번호 (비어 있음)
   h2:
     console:
       enabled: true   # H2 데이터베이스 콘솔을 활성화하여 브라우저에서 데이터베이스를 관리할 수 있도록 함
@@ -24,7 +25,7 @@ spring:
         #- classpath:db/data.sql  # 애플리케이션 초기화 시 실행할 데이터 삽입 SQL 파일의 경로 (data.sql)
   jpa:
     hibernate:
-      ddl-auto: create            # 애플리케이션이 시작될 때 데이터베이스 테이블을 자동으로 생성
+      ddl-auto: update            # 애플리케이션이 시작될 때 데이터베이스 테이블을 자동으로 생성
     show-sql: true                # Hibernate가 실행하는 SQL 쿼리를 콘솔에 출력
     properties:
       hibernate:
