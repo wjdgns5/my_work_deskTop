@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<span>
+		여기는 index.mustache 파일 입니다.
+
+		<p>이름 : {{name}}</p>
+		<p>나이 : {{age}}</p>
+		<p>이메일 : {{email}}</p>
+		<p>이메일(콧수염) : {{{email}}}</p> 
+		<p>비밀번호 : {{password}}</p>
+
+		{{#password}}
+			<p>Passowrd는 값이 있습니다 : {{password}} </p>			
+		{{/password}}
+
+		{{^password2}}
+			<p>Password2 는 값이 없습니다.</p>
+		{{/password2}}
+		
+		
+		
+	</span>
+</body>
+</html>

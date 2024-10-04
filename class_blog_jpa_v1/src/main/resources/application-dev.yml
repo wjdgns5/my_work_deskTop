@@ -39,3 +39,7 @@ spring:
 logging:
   level:
     '[com.example.class_blog_jpa_v1]': DEBUG  # 특정 패키지(com.tenco.blog_jpa_step1) 수준에서 DEBUG 레벨로 로깅을 설정
+
+config:
+  title: MY APPLICATION
+  author: MOSEOH
